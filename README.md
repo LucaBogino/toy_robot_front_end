@@ -1,6 +1,11 @@
 Toy Robot Simulator
 ===================
 
+Dependencies
+------------
+
+The project use Angular Material UI Library, so before start the app, please install the dependency.
+
 Description
 -----------
 

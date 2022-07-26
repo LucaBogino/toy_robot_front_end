@@ -1,0 +1,58 @@
+.boardContainer{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 100px);
+}
+
+.centerizer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.even {
+    background-color: #002c3e;
+}
+
+.odd {
+    background-color: #c0e0e6;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.reportContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.start-btn {
+    min-width: 25%;
+}
+
+.info {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}

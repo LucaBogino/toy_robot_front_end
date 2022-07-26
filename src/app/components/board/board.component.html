@@ -1,0 +1,35 @@
+<div>
+    <mat-icon class="info" (click)="openInfoModal()">help_outline</mat-icon>
+</div>
+<div class="container">
+    <button mat-raised-button color="warn" class="start-btn" (click)="start()">Place robot</button>
+</div>
+<div class="boardContainer grid">
+    <div *ngFor="let square of board; let i = index" class="centerizer" [ngClass]="i%2 ? 'even' : 'odd'">
+        <div>
+            <robot *ngIf="robotPosition !== undefined && i === robotPosition"
+                [userInput]="userChangePosition"
+                [defaultPosition]="defaultPosition"
+                (changePosition)="moveRobot($event)"
+                (reset)="userChangePosition = $event"
+                (changeWay)="way = $event"
+            ></robot>
+        </div>
+    </div>
+</div>
+<div *ngIf="robotPosition !== undefined">
+    <div class="container">
+        <button mat-raised-button color="warn" class="start-btn" (click)="showReport = !showReport">{{showReport ? 'Hide report' : 'Show report'}}</button>
+    </div>
+    <div *ngIf="showReport" class="reportContainer">
+        <div class="txt-center">
+            Position on board:
+            <div class="bold">{{robotPosition}}</div>
+        </div>
+        <div class="txt-center">
+            To the
+            <div class="bold">{{way}}</div>
+        </div>
+    </div>
+</div>
+
